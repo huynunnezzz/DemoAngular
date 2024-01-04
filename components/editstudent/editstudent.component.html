@@ -1,0 +1,50 @@
+<div class="jumbotron">
+  <h1 class="display-3">Sửa thông tin sinh viên</h1>
+  <hr class="my-2" />
+  <p>Sửa thông tin dưới đây:</p>
+</div>
+<a name="" id="reload_add" class="btn" href="#" role="button"
+  style="background-color: white; color: black; float: right"><i class="fa-solid fa-rotate"></i></a>
+<br /><br />
+
+<form method="post" [formGroup]="editForm" (submit)="EditStd()" >
+  <div class="form-group" >
+    <div class="row">
+      <div class="col">
+        <label for="msv">Mã sinh viên:</label>
+        <input  type="text"  class="form-control" formControlName="msv" name="msv" id="msv" aria-describedby="helpId"
+          placeholder="Điền mã sinh viên"/>
+      </div>
+      <div class="col">
+        <label for="name">Họ tên:</label>
+        <input type="text"  class="form-control" formControlName="name" id="name"
+          aria-describedby="helpId" placeholder="Điền họ tên" />
+      </div>
+      <div class="col">
+        <label for="sex">Giới tính:</label>
+        <input type="text"  class="form-control" formControlName="sex" id="sex"
+          aria-describedby="helpId" placeholder="Điền giới tính" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <label for="address">Quê quán:</label>
+        <select class="form-control" formControlName="address" id="address" >
+          <option>-------</option>
+          <option>Nam Định</option>
+          <option>Hà Nội</option>
+          <option>Thanh Hóa</option>
+        </select>
+      </div>
+      <div class="col">
+        <label for="classroom">Lớp học:</label>
+        <input type="text"  class="form-control" formControlName="classroom" id="classroom"
+          aria-describedby="helpId" placeholder="Điền lớp học" />
+      </div>
+    </div>
+  </div>
+  <button type="submit" id="insert-student" class="btn btn-danger" style="color: red;margin-right: 10px;">Sửa</button>
+  <a name="" id="" class="btn btn-primary" href="/student-manager" role="button">Quay lại</a>
+</form>
+
+<br /><br />

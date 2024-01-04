@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Thông tin sinh viên</h1>
+
+  </div>
+</div>
+<a class="btn btn-primary btn-lg" routerLink="/insert-student" role="button">Thêm sinh viên</a>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>MSV</th>
+        <th>Tên</th>
+        <th>Giới tính</th>
+        <th>Địa chỉ</th>
+        <th>Lớp</th>
+        <th>Ảnh</th>
+        <th>Chức năng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let item of listStd">
+        <td scope="row">{{item.msv}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.sex}}</td>
+        <td>{{item.address}}</td>
+        <td>{{item.classroom}}</td>
+        <td>
+          <button type="submit" id="edit-student" class="btn btn-danger" routerLink="/edit-student/{{item._id}}" style="color: black;margin-right: 10px;">Sửa</button>
+          <button type="submit" id="delete-student" class="btn btn-warning" (click) = "deleteData(item._id)" >Xóa</button>
+          
+        </td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+
+  
